@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 <html>
-
+<head>
+    <title>Full Page Image</title>
     <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #page1-div {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* Add scrollbars when content exceeds viewport */
+        }
+
+        #image-container {
+            width: 100%;
+            height: auto; /* Automatically adjust height based on image */
+        }
+
+        img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove extra space below image */
+        }
 
 
 
-        
+/* For WebKit browsers (e.g., Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 17px; /* width of the scrollbar */
+}
+
+
+::-webkit-scrollbar-track {
+    background-color: #111; /* color of the scrollbar track */
+}
+
+/* For Firefox */
+/* Note: Firefox does not support styling the scrollbar as extensively as WebKit */
+/* You may not get the same level of customization */
+/* These styles will only affect Firefox and not WebKit browsers */
+/* You can adjust this as per your requirement */
+
+/* scrollbar width */
+* {
+    scrollbar-width: 17px;
+    scrollbar-color: #1DBF32 #111;
+}
+
+/* scrollbar track */
+*::-webkit-scrollbar-track {
+    background-color: #111;
+}
+
+
+
+
+
+
+
     </style>
 </head>
 <body>
