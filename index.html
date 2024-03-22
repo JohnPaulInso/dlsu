@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,23 +35,10 @@
         }
 
         .mcwidget-embed {
-            display: none;
             position: fixed;
             bottom: 20px; /* adjust as per your preference */
             right: 20px; /* adjust as per your preference */
             z-index: 1000; /* ensure it's above other content */
-        }
-
-        .mcwidget-popup {
-            display: none;
-            position: fixed;
-            bottom: 50px; /* adjust as per your preference */
-            right: 50px; /* adjust as per your preference */
-            z-index: 1100; /* ensure it's above widget button */
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
 
         /* For WebKit browsers (e.g., Chrome, Safari) */
@@ -87,35 +73,7 @@
         <div id="image-container">
             <img src="target001.png" alt="background image" style="z-index: -1000;" />
             <div class="mcwidget-embed" data-widget-id="23579839"></div>
-            <div class="mcwidget-popup" id="mcwidget-popup">
-                <!-- Your popup content here -->
-                <h2>Welcome to our chat!</h2>
-                <p>This is a custom popup for ManyChat.</p>
-            </div>
         </div>
     </div>
-
-    <script>
-        // This script will handle the display of the popup
-        document.addEventListener("DOMContentLoaded", function() {
-            // Get the widget button
-            var widgetButton = document.querySelector('.mcwidget-embed');
-
-            // Get the popup
-            var popup = document.getElementById('mcwidget-popup');
-
-            // When the widget button is clicked, show the popup
-            widgetButton.addEventListener('click', function() {
-                popup.style.display = 'block';
-            });
-
-            // When the popup is clicked outside, hide the popup
-            popup.addEventListener('click', function(event) {
-                if (event.target === popup) {
-                    popup.style.display = 'none';
-                }
-            });
-        });
-    </script>
 </body>
 </html>
